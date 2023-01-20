@@ -7,5 +7,15 @@ pipeline {
                 echo 'Hello Jenkins'
             }
         }
+        stage('Build') {
+            steps {
+                mvn package
+            }
+        }
+        stage('test') {
+            steps {
+                mvn test
+            }
+        }
     }
 }
