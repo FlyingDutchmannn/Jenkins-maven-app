@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello Jenkins') {
-            steps {
-                echo 'Hello Jenkins'
-            }
-        }
         stage('Build') {
             steps {
-                mvn package
+                echo 'Building..'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
-                mvn test
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
